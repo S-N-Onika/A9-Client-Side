@@ -76,7 +76,7 @@ export default function AuthProvider({ children }) {
         loading,
         createUser,
         loginUser,
-        logoutUser, // This matches what MyProfile will now look for
+        logoutUser,
         loginWithGoogle,
         updateUserProfile
     };
