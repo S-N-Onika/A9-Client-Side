@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom"
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
-// import AllRooms from "./pages/AllRooms";
+import AllRooms from "./pages/AllRooms";
 // import RoomDetails from "./pages/RoomDetails";
 // import AddRoom from "./pages/AddRoom";
 // import MyListings from "./pages/MyListings";
@@ -22,10 +22,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />
       },
-      // {
-      //   path: "/rooms",
-      //   element: <AllRooms />
-      // },
+      {
+        path: "/rooms",
+        element: <AllRooms />
+      },
       // {
       //   path: "/rooms/:id",
       //   element: <RoomDetails />
