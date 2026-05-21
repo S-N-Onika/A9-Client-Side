@@ -11,6 +11,7 @@ import MyProfile from "./pages/MyProfile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import PrivateRoute from "./routes/PrivateRoute";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -57,7 +58,11 @@ const router = createBrowserRouter([
       // {
       //   path: "/update-room/:id",
       //   element: <PrivateRoute><UpdateRoom /></PrivateRoute>
-      // }
+      // },
+      {
+        path: "*",
+        element: <NotFound />
+      }
     ]
   },
   {
