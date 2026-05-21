@@ -15,6 +15,8 @@ export default function Register() {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     useEffect(() => {
+        document.title = "StudyNook - Register";
+        
         const globalNavbar = document.querySelector("nav");
         const globalFooter = document.querySelector("footer");
 

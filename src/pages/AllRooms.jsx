@@ -12,7 +12,7 @@ export default function AllRooms() {
     const [loading, setLoading] = useState(true);
     const [search, setSearch] = useState("");
     const [selectedAmenities, setSelectedAmenities] = useState([]);
-    const [maxPrice, setMaxPrice] = useState(30);
+    const [maxPrice, setMaxPrice] = useState(100);
 
     const amenitiesOptions = ["Whiteboard", "Projector", "Wi-Fi", "Power Outlets", "Quiet Zone", "Air Conditioning"];
 
@@ -74,7 +74,7 @@ export default function AllRooms() {
                         <input
                             type="range"
                             min="0"
-                            max="50"
+                            max="100"
                             value={maxPrice}
                             onChange={(e) => setMaxPrice(e.target.value)}
                             className="w-full accent-[#C29B38] bg-stone-200 h-1.5 rounded-lg appearance-none cursor-pointer"

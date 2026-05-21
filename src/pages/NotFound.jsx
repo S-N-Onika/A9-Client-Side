@@ -7,6 +7,9 @@ import loginBgImage from "../assets/books1.webp";
 
 export default function NotFound() {
     useEffect(() => {
+
+        document.title = "StudyNook - Not Found";
+
         const globalNavbar = document.querySelector("nav");
         const globalFooter = document.querySelector("footer");
 

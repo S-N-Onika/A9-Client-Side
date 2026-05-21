@@ -19,6 +19,9 @@ export default function Login() {
     const from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
+
+        document.title = "StudyNook - Login";
+
         const globalNavbar = document.querySelector("nav");
         const globalFooter = document.querySelector("footer");
 

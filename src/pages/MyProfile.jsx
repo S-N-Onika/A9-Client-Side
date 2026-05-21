@@ -16,6 +16,9 @@ export default function MyProfile() {
     const [imgSrc, setImgSrc] = useState(fallbackAvatar);
 
     useEffect(() => {
+
+        document.title = "StudyNook - My Profile";
+
         if (user?.photoURL && user.photoURL.trim().startsWith("http")) {
             setImgSrc(user.photoURL);
         } else {
