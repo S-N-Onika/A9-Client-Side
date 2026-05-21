@@ -5,7 +5,7 @@ export default function Stats() {
         {
             id: 1,
             icon: <LuBookmark className="w-6 h-6" />,
-            value: "45+",
+            value: "50+",
             label: "Active Chambers Listed",
             desc: "Distributed across East, West, and Central wings."
         },
