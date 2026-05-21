@@ -13,7 +13,7 @@ export default function Navbar() {
     const handleSignOut = () => {
         logoutUser()
             .then(() => {
-                toast.success("Signed out safely. Wishing you a peaceful study hour.");
+                toast.success("Signed out safely.");
                 setIsProfileDropdownOpen(false);
                 setIsMobileMenuOpen(false);
             })

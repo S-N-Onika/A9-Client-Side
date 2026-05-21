@@ -8,8 +8,8 @@ import MainLayout from "./layouts/MainLayout";
 // import MyListings from "./pages/MyListings";
 // import MyBookings from "./pages/MyBookings";
 // import UpdateRoom from "./pages/UpdateRoom";
-// import Login from "./pages/Login";
-// import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 // import PrivateRoute from "./routes/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -29,14 +29,14 @@ const router = createBrowserRouter([
       //   path: "/rooms/:id",
       //   element: <RoomDetails />
       // },
-      // {
-      //   path: "/login",
-      //   element: <Login />
-      // },
-      // {
-      //   path: "/register",
-      //   element: <Register />
-      // },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/register",
+        element: <Register />
+      },
       // {
       //   path: "/my-profile",
       //   element: <PrivateRoute><MyProfile /></PrivateRoute>
