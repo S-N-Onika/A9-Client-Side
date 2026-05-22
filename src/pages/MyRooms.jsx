@@ -14,7 +14,7 @@ import {
 import { FiEdit } from "react-icons/fi";
 import toast from "react-hot-toast";
 
-export default function MyListings() {
+export default function MyRooms() {
     const { user } = useContext(AuthContext);
     const [myRooms, setMyRooms] = useState([]);
     const [loading, setLoading] = useState(true);

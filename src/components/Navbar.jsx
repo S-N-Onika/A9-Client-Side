@@ -56,7 +56,7 @@ export default function Navbar() {
                         {user && (
                             <>
                                 <NavLink to="/add-room" className={getNavLinkClass}>Add Room</NavLink>
-                                <NavLink to="/my-listings" className={getNavLinkClass}>My Listings</NavLink>
+                                <NavLink to="/my-Rooms" className={getNavLinkClass}>My Rooms</NavLink>
                                 <NavLink to="/my-bookings" className={getNavLinkClass}>My Bookings</NavLink>
                             </>
                         )}
@@ -126,7 +126,7 @@ export default function Navbar() {
                         {user && (
                             <>
                                 <NavLink to="/add-room" onClick={() => setIsMobileMenuOpen(false)} className={getMobileNavLinkClass}>Add Room</NavLink>
-                                <NavLink to="/my-listings" onClick={() => setIsMobileMenuOpen(false)} className={getMobileNavLinkClass}>My Listings</NavLink>
+                                <NavLink to="/my-Rooms" onClick={() => setIsMobileMenuOpen(false)} className={getMobileNavLinkClass}>My Rooms</NavLink>
                                 <NavLink to="/my-bookings" onClick={() => setIsMobileMenuOpen(false)} className={getMobileNavLinkClass}>My Bookings</NavLink>
                                 <NavLink to="/my-profile" onClick={() => setIsMobileMenuOpen(false)} className={getMobileNavLinkClass}>My Profile</NavLink>
                             </>
