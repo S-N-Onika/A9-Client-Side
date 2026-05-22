@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect } from "react";
 import {
-    getAuth,
     GoogleAuthProvider,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
