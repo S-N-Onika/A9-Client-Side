@@ -89,7 +89,7 @@ export default function Banner() {
                         </Link>
 
                         <Link
-                            to="/AddRoom"
+                            to="/add-room"
                             className="inline-flex items-center justify-center gap-2 border-2 border-stone-400 hover:border-[#C29B38] text-stone-200 hover:text-white px-6 py-3 md:px-8 md:py-4 rounded font-bold text-xs uppercase tracking-widest transition-all hover:-translate-y-1 active:scale-95"
                         >
                             <LuCirclePlus className="w-4 h-4" />
