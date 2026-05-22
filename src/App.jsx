@@ -3,7 +3,7 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import MyProfile from "./pages/MyProfile";
 import AllRooms from "./pages/AllRooms";
-// import RoomDetails from "./pages/RoomDetails";
+import RoomDetails from "./pages/RoomDetails";
 import AddRoom from "./pages/AddRoom";
 import MyRooms from "./pages/MyRooms";
 import MyBookings from "./pages/MyBookings";
@@ -26,10 +26,10 @@ const router = createBrowserRouter([
         path: "/rooms",
         element: <AllRooms />
       },
-      // {
-      //   path: "/rooms/:id",
-      //   element: <RoomDetails />
-      // },
+      {
+        path: "/rooms/:id",
+        element: <RoomDetails />
+      },
       {
         path: "/login",
         element: <Login />
