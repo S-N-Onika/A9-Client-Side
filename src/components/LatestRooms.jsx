@@ -9,7 +9,7 @@ export default function LatestRooms() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get(`${import.meta.env.VITE_API_URL}/api/rooms`)
+        axios.get(`https://studynook-server-alpha.vercel.app/api/rooms`)
             .then(res => {
                 setLatestRooms(res.data);
                 setLoading(false);
