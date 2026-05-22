@@ -7,7 +7,7 @@ import RoomDetails from "./pages/RoomDetails";
 import AddRoom from "./pages/AddRoom";
 import MyRooms from "./pages/MyRooms";
 import MyBookings from "./pages/MyBookings";
-// import UpdateRoom from "./pages/UpdateRoom";
+import UpdateRoom from "./pages/UpdateRoom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import PrivateRoute from "./routes/PrivateRoute";
@@ -55,10 +55,10 @@ const router = createBrowserRouter([
         path: "/my-bookings",
         element: <PrivateRoute><MyBookings /></PrivateRoute>
       },
-      // {
-      //   path: "/update-room/:id",
-      //   element: <PrivateRoute><UpdateRoom /></PrivateRoute>
-      // },
+      {
+        path: "/update-room/:id",
+        element: <PrivateRoute><UpdateRoom /></PrivateRoute>
+      },
       {
         path: "*",
         element: <NotFound />

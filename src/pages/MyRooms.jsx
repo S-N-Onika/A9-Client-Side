@@ -156,7 +156,7 @@ export default function MyRooms() {
 
                                     <div className="flex gap-2">
                                         <Link
-                                            to={`/edit-room/${room._id}`}
+                                            to={`/-room/${room._id}`}
                                             className="flex-1 text-center py-2 text-xs font-bold border border-stone-200 rounded"
                                         >
                                             Edit
@@ -219,7 +219,7 @@ export default function MyRooms() {
                                                 <td className="py-4 px-6">
                                                     <div className="flex justify-center gap-2">
                                                         <Link
-                                                            to={`/edit-room/${room._id}`}
+                                                            to={`/update-room/${room._id}`}
                                                             className="p-2 border rounded"
                                                         >
                                                             <FiEdit className="w-4 h-4" />
