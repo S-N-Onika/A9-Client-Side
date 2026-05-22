@@ -33,7 +33,7 @@ export default function AddRoom() {
         };
 
         try {
-            await axios.post(`${import.meta.env.VITE_API_URL}/api/rooms`, payload, { withCredentials: true });
+            await axios.post("https://studynook-server-alpha.vercel.app/api/rooms", payload, { withCredentials: true });
             toast.success("Study room registered successfully!", { id: clearToastId });
             navigate("/rooms");
         } catch (err) {

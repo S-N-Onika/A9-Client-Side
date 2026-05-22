@@ -20,7 +20,7 @@ export default function MyRooms() {
         document.title = "StudyNook - My Managed Rooms";
         if (user?.email) {
 
-            axios.get(`${import.meta.env.VITE_API_URL}/api/rooms`, { withCredentials: true })
+            axios.get("https://studynook-server-alpha.vercel.app/api/rooms", { withCredentials: true })
 
                 .then((res) => {
                     const roomData = Array.isArray(res.data) ? res.data : [];
@@ -43,7 +43,7 @@ export default function MyRooms() {
 
         const clearToastId = toast.loading("Expunging study sanctuary record...");
 
-        axios.delete(`${import.meta.env.VITE_API_URL}/api/rooms/${roomId}`, { withCredentials: true })
+        axios.delete(`https://studynook-server-alpha.vercel.app/api/rooms/${roomId}`, { withCredentials: true })
             .then(() => {
                 toast.success("Study sanctuary record expunged successfully!", { id: clearToastId });
                 setMyRooms(prev => prev.filter(room => room._id !== roomId));

@@ -18,7 +18,7 @@ export default function UpdateRoom() {
     useEffect(() => {
         document.title = "StudyNook - Modify Chamber Specifications";
 
-        axios.get(`${import.meta.env.VITE_API_URL}/api/rooms/${id}`, { withCredentials: true })
+        axios.get(`https://studynook-server-alpha.vercel.app/api/rooms/${id}`, { withCredentials: true })
 
             .then(res => {
                 const room = res.data;
@@ -55,7 +55,7 @@ export default function UpdateRoom() {
         };
 
         try {
-            await axios.put(`${import.meta.env.VITE_API_URL}/api/rooms/${id}`, payload, { withCredentials: true });
+            await axios.put(`https://studynook-server-alpha.vercel.app/api/rooms/${id}`, payload, { withCredentials: true });
             toast.success("Specifications updated successfully!", { id: clearToastId });
             navigate("/my-rooms");
         } catch (err) {
