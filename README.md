@@ -1,5 +1,4 @@
-# React + Vite
-StudyNook 📚✨
+# StudyNook 📚✨
 
 A modern collaborative study room booking platform where students can discover, create, and manage study spaces with ease.
 
