@@ -1,16 +1,162 @@
 # React + Vite
+StudyNook 📚✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern collaborative study room booking platform where students can discover, create, and manage study spaces with ease.
 
-Currently, two official plugins are available:
+🌐 Live Site: [StudyNook Live Demo](https://a9-client-side.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🚀 Project Overview
 
-## Expanding the ESLint configuration
+StudyNook is a full-stack web application designed for students who need productive and organized study environments. Users can browse available study rooms, add their own rooms, book spaces, and manage room information through a clean and responsive interface.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The platform focuses on:
+
+Smooth user experience
+
+Secure authentication
+
+Modern UI/UX
+
+Real-time room management
+
+Fully responsive design
+
+
+
+---
+
+✨ Features
+
+🔐 Firebase Authentication
+
+👤 User Profile Management
+
+➕ Add New Study Rooms
+
+✏️ Update & Delete Own Rooms
+
+🔍 Search & Filter Rooms
+
+📱 Fully Responsive Design
+
+🌙 Modern UI with smooth interactions
+
+⚡ Fast loading with Vite
+
+🍞 Toast Notifications
+
+🔒 Protected Private Routes
+
+🌐 MongoDB Database Integration
+
+
+
+---
+
+🛠️ Tech Stack
+
+Frontend
+
+React
+
+React Router
+
+Tailwind CSS
+
+DaisyUI
+
+Firebase Authentication
+
+Axios
+
+React Hot Toast
+
+React Icons
+
+Lottie React
+
+
+Backend
+
+Node.js
+
+Express.js
+
+MongoDB
+
+JWT Authentication
+
+
+
+---
+
+📸 Preview
+
+Home Page
+
+Modern responsive landing page with featured study rooms
+
+Dashboard
+
+Manage your created rooms and bookings easily
+
+Authentication
+
+Secure login & registration system with Firebase
+
+
+
+
+---
+
+🎯 Core Functionalities
+
+🏠 Study Room Management
+
+Users can:
+
+Create study rooms
+
+Edit their own rooms
+
+Delete rooms
+
+View detailed room information
+
+
+🔒 Authentication System
+
+Email/password login
+
+Secure JWT implementation
+
+Protected routes
+
+
+🔍 Smart Search & Filters
+
+Search rooms by name
+
+Filter by amenities
+
+Filter by price
+
+
+
+---
+
+📱 Responsive Design
+
+The application is optimized for:
+
+Mobile Devices
+
+Tablets
+
+Laptops
+
+Desktop Screens
+
