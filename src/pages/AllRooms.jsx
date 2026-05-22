@@ -25,7 +25,7 @@ export default function AllRooms() {
                 if (selectedAmenities.length > 0) queryParams.append("amenities", selectedAmenities.join(","));
                 if (maxPrice) queryParams.append("maxPrice", maxPrice);
 
-                const response = await axios.get(`http://localhost:5000/api/rooms?${queryParams.toString()}`);
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/rooms?${queryParams.toString()}`, { withCredentials: true });
                 setRooms(Array.isArray(response.data) ? response.data : []);
             } catch (err) {
                 console.error("Error reading room library arrays", err);

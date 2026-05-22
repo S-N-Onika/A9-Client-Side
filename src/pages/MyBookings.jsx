@@ -13,7 +13,7 @@ export default function MyBookings() {
     useEffect(() => {
         document.title = "StudyNook - My Active Reservations";
         if (user?.email) {
-            axios.get(`http://localhost:5000/api/bookings`, { withCredentials: true })
+            axios.get(`${import.meta.env.VITE_API_URL}/api/bookings`, { withCredentials: true })
                 .then((res) => {
                     setBookings(Array.isArray(res.data) ? res.data : []);
                     setLoading(false);
@@ -33,7 +33,7 @@ export default function MyBookings() {
 
         const clearToastId = toast.loading("Processing atomic cancellation pipeline...");
 
-        axios.patch(`http://localhost:5000/api/bookings/${bookingId}/cancel`, {}, { withCredentials: true })
+        axios.patch(`${import.meta.env.VITE_API_URL}/api/bookings/${bookingId}/cancel`, {}, { withCredentials: true })
             .then(() => {
                 toast.success("Reservation cancelled successfully!", { id: clearToastId });
                 setBookings(prev =>

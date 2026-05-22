@@ -9,7 +9,7 @@ export default function LatestRooms() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/rooms/home-rooms")
+        axios.get(`${import.meta.env.VITE_API_URL}/api/rooms`)
             .then(res => {
                 setLatestRooms(res.data);
                 setLoading(false);

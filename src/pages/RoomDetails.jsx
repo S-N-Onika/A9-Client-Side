@@ -19,7 +19,7 @@ export default function RoomDetails() {
 
     useEffect(() => {
         document.title = "StudyNook - Room Overview";
-        axios.get(`http://localhost:5000/api/rooms/${id}`)
+        axios.get(`${import.meta.env.VITE_API_URL}/api/rooms/${id}`, { withCredentials: true })
             .then(res => {
                 setRoom(res.data);
                 setLoading(false);
@@ -64,7 +64,7 @@ export default function RoomDetails() {
         };
 
         try {
-            await axios.post("http://localhost:5000/api/bookings", bookingPayload, { withCredentials: true });
+            await axios.post(`${import.meta.env.VITE_API_URL}/api/bookings`, bookingPayload, { withCredentials: true });
             toast.success("Room booked successfully!", { id: clearToastId });
             navigate("/my-bookings");
         } catch (err) {

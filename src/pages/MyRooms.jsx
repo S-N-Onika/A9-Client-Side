@@ -3,9 +3,6 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import {
-    LuLayers,
-    LuUsers,
-    LuDollarSign,
     LuTrash2,
     LuInbox,
     LuLoaderCircle,
@@ -22,7 +19,9 @@ export default function MyRooms() {
     useEffect(() => {
         document.title = "StudyNook - My Managed Rooms";
         if (user?.email) {
-            axios.get(`http://localhost:5000/api/rooms?email=${user.email}`, { withCredentials: true })
+
+            axios.get(`${import.meta.env.VITE_API_URL}/api/rooms`, { withCredentials: true })
+
                 .then((res) => {
                     const roomData = Array.isArray(res.data) ? res.data : [];
                     const filtered = roomData.filter(room => room.ownerEmail === user.email);
@@ -44,7 +43,7 @@ export default function MyRooms() {
 
         const clearToastId = toast.loading("Expunging study sanctuary record...");
 
-        axios.delete(`http://localhost:5000/api/rooms/${roomId}`, { withCredentials: true })
+        axios.delete(`${import.meta.env.VITE_API_URL}/api/rooms/${roomId}`, { withCredentials: true })
             .then(() => {
                 toast.success("Study sanctuary record expunged successfully!", { id: clearToastId });
                 setMyRooms(prev => prev.filter(room => room._id !== roomId));

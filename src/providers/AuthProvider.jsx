@@ -54,13 +54,13 @@ export default function AuthProvider({ children }) {
             if (currentUser) {
                 const userInfo = { email: currentUser.email };
                 try {
-                    await axios.post("http://localhost:5000/api/jwt", userInfo, { withCredentials: true });
+                    await axios.post(`${import.meta.env.VITE_API_URL}/api/jwt`, userInfo, { withCredentials: true });
                 } catch (error) {
                     console.error("JWT handshake configuration error:", error);
                 }
             } else {
                 try {
-                    await axios.post("http://localhost:5000/api/logout", {}, { withCredentials: true });
+                    await axios.post(`${import.meta.env.VITE_API_URL}/api/logout`, {}, { withCredentials: true });
                 } catch (error) {
                     console.error("JWT context termination error:", error);
                 }
