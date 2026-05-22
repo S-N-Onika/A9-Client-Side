@@ -115,18 +115,27 @@ export default function AddRoom() {
 
                         <div>
                             <label className="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Hourly Fee (USD $)</label>
-                            <div className="relative">
-                                <LuDollarSign className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 w-4 h-4" />
+                            <div className="relative w-full rounded border border-[#EADFC9] bg-[#FBF8F3] focus-within:bg-white transition-colors">
+                                <LuDollarSign className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400 w-4 h-4 z-10" />
                                 <input
                                     type="number"
                                     step="0.01"
-                                    {...register("Number(hourlyRate)", { required: true, min: 0 })}
-                                    className="w-full pl-9 pr-4 py-2.5 rounded border border-[#EADFC9] bg-[#FBF8F3] text-sm text-[#2E1A0F] focus:bg-white focus:outline-none transition-colors"
+                                    {...register("hourlyRate", {
+                                        required: "Valid hourly rate is required.",
+                                        min: { value: 1, message: "Minimum fee must be $1/hr." },
+                                        max: { value: 100, message: "Maximum fee cannot exceed $100/hr." }
+                                    })}
+                                    className="w-full pl-9 pr-4 py-2.5 bg-transparent text-sm text-[#2E1A0F] focus:outline-none relative z-20"
                                     placeholder="e.g. 5.50"
                                 />
                             </div>
-                            {errors.hourlyRate && <span className="text-xs font-bold text-rose-600 mt-1 block">Valid hourly rate is required.</span>}
+                            {errors.hourlyRate && (
+                                <span className="text-xs font-bold text-rose-600 mt-1 block">
+                                    {errors.hourlyRate.message}
+                                </span>
+                            )}
                         </div>
+
                     </div>
 
                     <div>

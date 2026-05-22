@@ -5,7 +5,7 @@ import MyProfile from "./pages/MyProfile";
 import AllRooms from "./pages/AllRooms";
 // import RoomDetails from "./pages/RoomDetails";
 import AddRoom from "./pages/AddRoom";
-// import MyListings from "./pages/MyListings";
+import MyListings from "./pages/MyListings";
 // import MyBookings from "./pages/MyBookings";
 // import UpdateRoom from "./pages/UpdateRoom";
 import Login from "./pages/Login";
@@ -47,10 +47,10 @@ const router = createBrowserRouter([
         path: "/add-room",
         element: <PrivateRoute><AddRoom /></PrivateRoute>
       },
-      // {
-      //   path: "/my-listings",
-      //   element: <PrivateRoute><MyListings /></PrivateRoute>
-      // },
+      {
+        path: "/my-listings",
+        element: <PrivateRoute><MyListings /></PrivateRoute>
+      },
       // {
       //   path: "/my-bookings",
       //   element: <PrivateRoute><MyBookings /></PrivateRoute>
